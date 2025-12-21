@@ -8,8 +8,12 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    connect(ui->ChatListWidget, &ChatList::signalUserClicked,
-            ui->ChatboxWidget, &Chatbox::setUserTitle);
+    connect(ui->ChatListWidget, &ChatList::signalUserClicked, this, [=](const QString &name){
+        ui->ChatboxWidget->setUserTitle(name);
+        ui->stackedWidget->setCurrentIndex(1);
+    });
+
+    ui->stackedWidget->setCurrentIndex(0);
 }
 
 MainWindow::~MainWindow()

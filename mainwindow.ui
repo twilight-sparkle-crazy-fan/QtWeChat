@@ -87,25 +87,9 @@
      </widget>
     </item>
     <item>
-     <widget class="Chatbox" name="ChatboxWidget" native="true">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>700</width>
-        <height>720</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>720</height>
-       </size>
-      </property>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="QWidget" name="stackedWidget_2"/>
+      <widget class="Chatbox" name="ChatboxWidget"/>
      </widget>
     </item>
    </layout>
